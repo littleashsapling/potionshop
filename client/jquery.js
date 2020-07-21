@@ -16,17 +16,17 @@
             this.storage = sessionStorage;
 
 
-            this.$formAddToCart = this.$element.find(".addtocart"); // adding items to the cart
-            this.$formCart = this.$element.find("#potionscart"); // cart form
-            this.$checkoutCart = this.$element.find("#checkoutcart"); // finds final cart
-            this.$checkoutAddressForm = this.$element.find("#checkoutaddressform"); // checkoutform magic
-            this.$shipping = this.$element.find("#sshipping"); //shipping rates
-            this.$subTotal = this.$element.find("#stotal"); //  subtotal charges
-            this.$shoppingCartActions = this.$element.find("#potionscartactions"); // cart actions links
+            this.$formAddToCart = $(".addtocart"); // adding items to the cart
+            this.$formCart = $("#potionscart"); // cart form
+            this.$checkoutCart = $("#checkoutcart"); // finds final cart
+            this.$checkoutAddressForm = $("#checkoutaddressform"); // checkoutform magic
+            this.$shipping = $("#sshipping"); //shipping rates
+            this.$subTotal = $("#stotal"); //  subtotal charges
+            this.$shoppingCartActions = $("#potionscartactions"); // cart actions links
             this.$updateCartBtn = this.$shoppingCartActions.find("#updatecart"); // update cart button
             this.$emptyCartBtn = this.$shoppingCartActions.find("#emptycart"); // empty cart button
-            this.$userDetails = this.$element.find("#userdetails"); //  user information
-            this.$paypalForm = this.$element.find("#paypalform"); // pp form
+            this.$userDetails = $("#userdetails"); //  user information
+            this.$paypalForm = $("#paypalform"); // pp form
 
 
             this.currency = "&#36;"; // HTML entity
@@ -56,7 +56,7 @@
             this.updateCart();
             this.displayCart();
             this.deletePotions();
-            this.displayUserAdress();
+            this.displayUserAddress();
             this.populatePayPalForm();
 
 
@@ -102,15 +102,15 @@
                     var qty = cartItem.qty;
 
                     $("<div/>").html("<input type='hidden' name='quantity_" + n + "' value='" + qty + "'/>").
-                    insertBefore("#paypal-btn");
+                    insertBefore("#paypalbtn");
                     $("<div/>").html("<input type='hidden' name='item_name_" + n + "' value='" + name + "'/>").
-                    insertBefore("#paypal-btn");
+                    insertBefore("#paypalbtn");
                     $("<div/>").html("<input type='hidden' name='item_number_" + n + "' value='SKU " + name + "'/>").
-                    insertBefore("#paypal-btn");
+                    insertBefore("#paypalbtn");
                     $("<div/>").html("<input type='hidden' name='amount_" + n + "' value='" + self._formatNumber(price, 2) + "'/>").
-                    insertBefore("#paypal-btn");
+                    insertBefore("#paypalbtn");
                     $("<div/>").html("<input type='hidden' name='shipping_" + n + "' value='" + self._formatNumber(singShipping, 2) + "'/>").
-                    insertBefore("#paypal-btn");
+                    insertBefore("#paypalbtn");
 
                 }
 
@@ -121,7 +121,7 @@
 
         // user info magic
 
-        displayUserAdress: function() {
+        displayUserAddress: function() {
             if (this.$userDetails.length) {
                 if (this.storage.getItem("shippingname") == null) {
                     var name = this.storage.getItem("billingname");
@@ -188,7 +188,7 @@
 
         // Delete a product from the shopping cart
 
-        deleteProduct: function() {
+        deletePotions: function() {
             var self = this;
             if (self.$formCart.length) {
                 var cart = this._toJSONObject(this.storage.getItem(this.cartName));
@@ -623,3 +623,5 @@
     });
 
 })(jQuery);
+
+//live-server to activate npm live server
