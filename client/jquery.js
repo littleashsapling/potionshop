@@ -9,14 +9,14 @@
 
             // properties
 
-            this.cartPrefix = "yourpotions"; // prefix string to be prepended to the cart's name in the session storage
+            this.cartPrefix = "yourpotions-"; // prefix string to be prepended to the cart's name in the session storage
             this.cartName = this.cartPrefix + "potions"; // cart name in the session storage
             this.shippingRates = this.cartPrefix + "shippingrates"; // shipping rates key in the session storage
             this.total = this.cartPrefix + "total"; // total in session storage
             this.storage = sessionStorage;
 
 
-            this.$formAddToCart = this.$element.find("form.addtocart"); // adding items to the cart
+            this.$formAddToCart = this.$element.find(".addtocart"); // adding items to the cart
             this.$formCart = this.$element.find("#potionscart"); // cart form
             this.$checkoutCart = this.$element.find("#checkoutcart"); // finds final cart
             this.$checkoutAddressForm = this.$element.find("#checkoutaddressform"); // checkoutform magic
@@ -32,7 +32,7 @@
             this.currency = "&#36;"; // HTML entity
             this.currencyString = "$"; // Currency symbol as string for pp
             this.paypalCurrency = "CAD"; // PayPal's currency code
-            this.paypalEmail = ".com"; // pp email
+            this.paypalEmail = "sb-5ur3j2682912@business.example.com"; // pp email
             this.paypalURL = "https://www.sandbox.paypal.com/cgi-bin/webscr"; // pp form address
 
             // form validation QQ
@@ -148,7 +148,7 @@
                     var email = this.storage.getItem("billingemail");
                     var city = this.storage.getItem("billingcity");
                     var address = this.storage.getItem("billingaddress");
-                    var zip = this.storage.getItem("billingpostal");
+                    var postal = this.storage.getItem("billingpostal");
                     var country = this.storage.getItem("billingcountry");
 
                     var sName = this.storage.getItem("shippingname");

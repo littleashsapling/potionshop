@@ -16,15 +16,15 @@
                 <li class="item"><a href="/client/index.html">Home</a></li>
                 <li class="item"><a href="/client/pages/contactus.html">Contact Us</a></li>
                 <li class="item"><a href="/client/pages/potions.html">Potions</a></li>
-                <li class="item"><a href="/client/pages/shop.html">Cart</a></li>
+                <li class="item"><a href="/client/pages/cart.html">Cart</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="product-description" data-name="pot1" data-price="5">
-        <h3 class="product-name">pot 1</h3>
-        <p class="product-price">$ 5</p>
-        <form class="add-to-cart" action="cart.html" method="post">
+    <div class="productdescription" data-name="pot1" data-price="5">
+        <h3 class="productname">pot 1</h3>
+        <p class="productprice">$ 5</p>
+        <form class="addtocart" action="/client/pages/cart.html" method="post">
             <div>
                 <label for="qty-1">Quantity</label>
                 <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
@@ -32,7 +32,70 @@
             <p><input type="submit" value="Add to cart" class="btn" /></p>
         </form>
     </div>
-
+    <!--modal-->
+    <!--modal cart-->
+    <div class="modal" tabindex="-1" role="dialog" id="potionscartmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">My Potions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="potionscart" action="/client/pages/cart.html" method="post">
+                        <table class="potionscart">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <p id="sub-total">
+                            <strong>Sub Total</strong>: <span id="stotal"></span>
+                        </p>
+                        <ul id="potionsgcartactions">
+                            <li>
+                                <input type="submit" name="update" id="updatecart" class="btn" value="Update Cart" />
+                            </li>
+                            <li>
+                                <input type="submit" name="delete" id="emptycart" class="btn" value="Empty Cart" />
+                            </li>
+                            <li>
+                                <a href="/client/pages/potions.html" class="btn">Continue Shopping</a>
+                            </li>
+                            <li>
+                                <a href="/client/pages/checkout.html" class="btn">Go To Checkout</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('#potionscartmodal').on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '?',
+                    type: 'POST',
+                    data: $('#potionscartmodal').serialize(),
+                    success: function(data) {
+                        alert("Successfully submitted.");
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="/client/jquery.js"></script>
