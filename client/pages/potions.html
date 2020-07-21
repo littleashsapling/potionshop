@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potions</title>
+    <link rel="stylesheet" type="text/css" href="/client/css.css">
+</head>
+
+<body>
+    <div>
+        <div><a href="/client/index.html">stupid logo that wont work</a></div>
+        <nav>
+            <ul>
+                <li class="item"><a href="/client/index.html">Home</a></li>
+                <li class="item"><a href="/client/pages/contactus.html">Contact Us</a></li>
+                <li class="item"><a href="/client/pages/potions.html">Potions</a></li>
+                <li class="item"><a href="/client/pages/shop.html">Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="product-description" data-name="pot1" data-price="5">
+        <h3 class="product-name">pot 1</h3>
+        <p class="product-price">$ 5</p>
+        <form class="add-to-cart" action="cart.html" method="post">
+            <div>
+                <label for="qty-1">Quantity</label>
+                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+            </div>
+            <p><input type="submit" value="Add to cart" class="btn" /></p>
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="/client/jquery.js"></script>
+</body>
+
+</html>

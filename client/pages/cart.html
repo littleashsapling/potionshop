@@ -1,0 +1,31 @@
+<form id="potionscart" action="cart.html" method="post">
+    <table class="potionscart">
+        <thead>
+            <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="sub-total">
+        <strong>Sub Total</strong>: <span id="stotal"></span>
+    </p>
+    <ul id="potionsgcartactions">
+        <li>
+            <input type="submit" name="update" id="updatecart" class="btn" value="Update Cart" />
+        </li>
+        <li>
+            <input type="submit" name="delete" id="emptycart" class="btn" value="Empty Cart" />
+        </li>
+        <li>
+            <a href="/client/pages/potions.html" class="btn">Continue Shopping</a>
+        </li>
+        <li>
+            <a href="/client/pages/checkout.html" class="btn">Go To Checkout</a>
+        </li>
+    </ul>
+</form>
+
+<!--make it into a modal? if saved in local storage i think it could work.-->
