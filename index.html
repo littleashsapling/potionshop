@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="/css.css">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css.css">
 </head>
 
 <body>
-    <div>
-        <div><a href="/index.html">stupid logo that wont work</a></div>
-        <nav>
-            <ul>
-                <li class="item"><a href="/index.html">Home</a></li>
-                <li class="item"><a href="/pages/contactus.html">Contact Us</a></li>
-                <li class="item"><a href="/pages/potions.html">Potions</a></li>
-                <li class="item"><a href="/pages/cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav data-role="appbar" data-expand-point="md">
+        <a href="/index.html" class="brand"><img src="/src/img/brand.png" alt="brand"></a>
+        <ul class="app-bar-menu">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/pages/contactus.html">CONTACT US</a></li>
+            <li><a href="/pages/potions.html">POTIONS</a></li>
+            <li>
+                <a href="/pages/cart.html"><img src="/src/img/cart.png" alt="cart"></a>
+            </li>
+        </ul>
+    </nav>
     <!--main-->
     <div>
         <h1>Med, Wrath and Beyond</h1>
-        <img>
-        <img>
-        <img>
-        <p> omg so aweomse</p>
-        <button><a href="/pages/potions.html">Potions Dudes</a></button>
+
+        <div>
+            <img class="homeImg" src="/src/img/healingpot.png" alt="healing potion">
+            <img class="homeImg" src="/src/img/ichor.png" alt="blood of the gods">
+            <img class="homeImg" src="/src/img/energypot.png" alt="energy potion">
+        </div>
+        <p id="homeText"> Most Trusted Potions Shop this side of the internet!</p>
+        <a href="/pages/potions.html" class="button homeBtn">Shop Now</a>
 
         <!--my jquery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
