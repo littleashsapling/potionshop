@@ -10,18 +10,7 @@
 </head>
 
 <body>
-    <div>
-        <div><a href="/index.html">stupid logo that wont work</a></div>
-        <nav>
-            <ul>
-                <li class="item"><a href="/index.html">Home</a></li>
-                <li class="item"><a href="/pages/contactus.html">Contact Us</a></li>
-                <li class="item"><a href="/pages/potions.html">Potions</a></li>
-                <li class="item"><a href="/pages/shop.html">Cart</a></li>
-            </ul>
-        </nav>
-    </div>
-
+    <h2>Your Details</h2>
     <table id="checkoutcart" class="potionscart">
         <thead>
             <tr>
@@ -46,9 +35,8 @@
     </div>
 
     <form action="order.html" method="get" id="checkoutaddressform">
-        <h2>Your Details</h2>
         <fieldset id="fieldsetbilling">
-            <legend>Billing</legend>
+            <legend>Billing Address</legend>
 
             <div>
                 <label for="name">Name</label>
@@ -88,7 +76,7 @@
         <div id="shippingsame">Same as Billing <input type="checkbox" id="sameasbilling" value="" /></div>
 
         <fieldset id="fieldsetshipping">
-            <legend>Shipping</legend>
+            <legend>Shipping Address</legend>
             <div>
                 <label for="sname">Name</label>
                 <input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />

@@ -22,21 +22,28 @@
         </ul>
     </nav>
 
-    <form action="">
-        <label for="fname">Name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email">
-        <label for="message">Message</label><br>
-        <input type="text" id="message" name="message">
-        <input type="submit" value="Submit">
-    </form>
+    <div>
+        <h1>Contact Us</h1>
+        <form action="" method="POST">
+            <div>
+                <label for="fname">Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Full Name"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="youremail@something.com">
+            </div>
+            <div>
+                <label for="message">Message:</label><br>
+                <input type="textarea" id="message" name="message" placeholder="Type your message here." rows="4">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 
 <!--my jquery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script src="/jquery.js"></script>
 <!--metro 4-->
-<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>>
+<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
 
 </html>

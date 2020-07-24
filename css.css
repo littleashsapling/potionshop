@@ -2,7 +2,6 @@
 body {
     text-align: center;
     font-family: 'Alegreya', serif;
-    font-family: 'Alegreya SC', serif;
     background-color: #1A1B1A;
     color: #d6d1c9;
 }
@@ -19,6 +18,9 @@ body {
     width: 128px;
 }
 
+
+/*home*/
+
 h1 {
     line-height: 4.2;
 }
@@ -31,4 +33,41 @@ h1 {
     margin: 2rem 0;
     padding: 1rem 2rem;
     font-size: 1.5em;
+}
+
+
+/*forms*/
+
+input[type=text],
+input[type=textarea],
+input[type=select] {
+    font-family: 'Alegreya SC', serif;
+    width: 50%;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline;
+    margin: .5rem 0 2rem 0;
+}
+
+input[type=submit] {
+    font-family: 'Alegreya SC', serif;
+    font-weight: bold;
+    background-color: #d6d1c9;
+    color: #353635;
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: auto;
+}
+
+input[type=submit]:hover {
+    background-color: #d7c3ac;
+}
+
+label {
+    text-align: left;
+    margin-left: -40%;
 }
