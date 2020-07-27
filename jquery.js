@@ -23,8 +23,8 @@
             this.$shipping = $("#sshipping"); //shipping rates
             this.$subTotal = $("#stotal"); //  subtotal charges
             this.$shoppingCartActions = $("#potionscartactions"); // cart actions links
-            this.$updateCartBtn = this.$shoppingCartActions.find("#updatecart"); // update cart button
-            this.$emptyCartBtn = this.$shoppingCartActions.find("#emptycart"); // empty cart button
+            this.$updateCartBtn = $("#updatecart"); // update cart button
+            this.$emptyCartBtn = $("#emptycart"); // empty cart button
             this.$userDetails = $("#userdetails"); //  user information
             this.$paypalForm = $("#paypalform"); // pp form
 

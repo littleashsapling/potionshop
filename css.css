@@ -46,11 +46,29 @@ form#contactUs input[type=textarea] {
     border: 1px solid transparent;
     border-radius: 5px;
     box-sizing: border-box;
-    display: inline;
     margin: .5rem 0 2rem 0;
 }
 
-input[type=select] {}
+form#checkoutaddressform input[type=text],
+form#checkoutaddressform input[type=select] {
+    font-family: 'Alegreya SC', serif;
+    width: 50%;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: .5rem 0 2rem 0;
+}
+
+form#checkoutaddressform input[type=text] {
+    margin-left: 26%;
+}
+
+select#country,
+select#scountry {
+    width: 50% !important;
+    margin-left: 26%;
+}
 
 input[type=submit],
 .btnCSS {
@@ -75,6 +93,16 @@ label {
     margin-left: -40%;
 }
 
+legend {
+    font-size: x-large;
+    margin: 1rem;
+}
+
+div#shippingsame {
+    margin: 2rem 37% 2rem 2rem;
+    font-size: medium;
+}
+
 
 /*Cart*/
 
@@ -85,7 +113,7 @@ label {
 }
 
 li {
-    border-left: transparent!important;
+    border-left: transparent !important;
 }
 
 #potionscart {
@@ -126,28 +154,16 @@ li {
 
 /*potions*/
 
-.side {
-    overflow: hidden;
-}
-
 #products ul,
 ul {
     margin: 1.5em 0;
     padding: 0;
-    list-style-type: none!important;
-    list-style: none!important;
+    list-style-type: none !important;
+    list-style: none !important;
 }
 
 #products li {
     margin: 0 1%;
-}
-
-.productimage {
-    margin: 0;
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    float: left;
 }
 
 .productdescription {
@@ -168,12 +184,8 @@ ul {
 }
 
 .productprice {
-    width: 4em;
-    height: 4em;
     font-size: 1.2em;
     text-align: center;
-    margin: .5rem auto;
-    line-height: 4;
     border-radius: 50%;
 }
 
@@ -184,7 +196,7 @@ form.addtocart p {
 }
 
 form.addtocart {
-    border-bottom: 1px dotted #848487;
+    margin-bottom: 0.4rem;
 }
 
 form input.qty {
@@ -192,4 +204,11 @@ form input.qty {
     font-size: 1em;
     border-radius: 3px;
     margin-left: 0.4em;
+}
+
+div.row.flex-align-center {
+    border: 1px dashed #848487;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0.4rem auto;
 }
