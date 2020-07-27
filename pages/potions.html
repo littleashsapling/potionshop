@@ -14,24 +14,92 @@
         <a href="/index.html" class="brand"><img src="/src/img/brand.png" alt="brand"></a>
         <ul class="app-bar-menu">
             <li><a href="/index.html">HOME</a></li>
-            <li><a href="/pages/contactus.html">CONTACT US</a></li>
+            <!--<li><a href="/pages/contactus.html">CONTACT US</a></li> TODO-->
             <li><a href="/pages/potions.html">POTIONS</a></li>
             <li>
                 <a href="/pages/cart.html"><img src="/src/img/cart.png" alt="cart"></a>
             </li>
         </ul>
     </nav>
+    <h1>Potions</h1>
 
-    <div class="productdescription" data-name="pot1" data-price="5">
-        <h3 class="productname">pot 1</h3>
-        <p class="productprice">$ 5</p>
-        <form class="addtocart" action="/pages/cart.html" method="get">
-            <div>
-                <label for="qty-1">Quantity</label>
-                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-            </div>
-            <p><input type="submit" value="Add to cart" class="btn" /></p>
-        </form>
+    <div id="ifINeed">
+        <div id="productlist">
+            <ul>
+                <li>
+                    <div class="side">
+                        <div class="potionImg">
+                            <img src="/src/img/healingpot.png" alt="healing potion">
+                        </div>
+                        <div class="productdescription" data-name="pot1" data-price="3">
+                            <h3 class="productname">Healing Potion</h3>
+                            <p class="productprice">&#36; 3</p>
+                            <form class="addtocart" action="/pages/cart.html" method="get">
+                                <div>
+                                    <label for="qty-1">Quantity</label>
+                                    <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                                </div>
+                                <p><input type="submit" value="Add to cart" class="btn" /></p>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="side">
+                        <div class="potionImg">
+                            <img src="/src/img/energypot.png" alt="energy potion">
+                        </div>
+                        <div class="productdescription" data-name="pot2" data-price="3">
+                            <h3 class="productname">Energy Potion</h3>
+                            <p class="productprice">&#36; 3</p>
+                            <form class="addtocart" action="/pages/cart.html" method="get">
+                                <div>
+                                    <label for="qty-2">Quantity</label>
+                                    <input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+                                </div>
+                                <p><input type="submit" value="Add to cart" class="btn" /></p>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="side">
+                        <div class="potionImg">
+                            <img src="/src/img/arsenic.png" alt="Arsenic">
+                        </div>
+                        <div class="productdescription" data-name="pot3" data-price="10">
+                            <h3 class="productname">Arsenic</h3>
+                            <p class="productprice">&#36; 10</p>
+                            <form class="addtocart" action="/pages/cart.html" method="get">
+                                <div>
+                                    <label for="qty-3">Quantity</label>
+                                    <input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+                                </div>
+                                <p><input type="submit" value="Add to cart" class="btn" /></p>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="side">
+                        <div class="potionImg">
+                            <img src="/src/img/ichor.png" alt="ichor">
+                        </div>
+                        <div class="productdescription" data-name="pot4" data-price="50">
+                            <h3 class="productname">ichor</h3>
+                            <p class="productprice">&#36; 50</p>
+                            <form class="addtocart" action="/pages/cart.html" method="get">
+                                <div>
+                                    <label for="qty-4">Quantity</label>
+                                    <input type="text" name="qty-4" id="qty-4" class="qty" value="1" />
+                                </div>
+                                <p><input type="submit" value="Add to cart" class="btn" /></p>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <!--my jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>

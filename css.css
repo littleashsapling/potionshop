@@ -38,9 +38,8 @@ h1 {
 
 /*forms*/
 
-input[type=text],
-input[type=textarea],
-input[type=select] {
+form#contactUs input[type=text],
+form#contactUs input[type=textarea] {
     font-family: 'Alegreya SC', serif;
     width: 50%;
     padding: 1.5rem;
@@ -51,16 +50,20 @@ input[type=select] {
     margin: .5rem 0 2rem 0;
 }
 
-input[type=submit] {
+input[type=select] {}
+
+input[type=submit],
+.btnCSS {
     font-family: 'Alegreya SC', serif;
     font-weight: bold;
     background-color: #d6d1c9;
     color: #353635;
-    padding: .5rem 1.5rem;
+    padding: .5rem;
+    font-size: medium;
+    height: auto;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    height: auto;
 }
 
 input[type=submit]:hover {
@@ -70,4 +73,123 @@ input[type=submit]:hover {
 label {
     text-align: left;
     margin-left: -40%;
+}
+
+
+/*Cart*/
+
+.group-list.horizontal {
+    border: transparent;
+    position: sticky;
+    bottom: 10px;
+}
+
+li {
+    border-left: transparent!important;
+}
+
+#potionscart {
+    margin: 1.5em 0;
+}
+
+.potionscart {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 75%;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+}
+
+.potionscart th {
+    font-size: 1.3em;
+    padding: 0.3em;
+    width: 33.3%;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+
+.potionscart td {
+    padding: 0.3em;
+    width: 33.3%;
+    border: 1px solid transparent;
+}
+
+#subtotal,
+#shipping {
+    margin: 1rem 19% 1rem 1rem;
+    text-align: right;
+}
+
+
+/*potions*/
+
+.side {
+    overflow: hidden;
+}
+
+#products ul,
+ul {
+    margin: 1.5em 0;
+    padding: 0;
+    list-style-type: none!important;
+    list-style: none!important;
+}
+
+#products li {
+    margin: 0 1%;
+}
+
+.productimage {
+    margin: 0;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    float: left;
+}
+
+.productdescription {
+    margin: 0;
+    padding: 1em;
+    border-radius: 5px;
+    float: left;
+}
+
+.productname {
+    text-align: center;
+    margin: 0;
+    font-size: 1.4em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px dotted #848487;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.productprice {
+    width: 4em;
+    height: 4em;
+    font-size: 1.2em;
+    text-align: center;
+    margin: .5rem auto;
+    line-height: 4;
+    border-radius: 50%;
+}
+
+form.addtocart div,
+form.addtocart p {
+    text-align: center;
+    display: inline-block;
+}
+
+form.addtocart {
+    border-bottom: 1px dotted #848487;
+}
+
+form input.qty {
+    width: 40px;
+    font-size: 1em;
+    border-radius: 3px;
+    margin-left: 0.4em;
 }

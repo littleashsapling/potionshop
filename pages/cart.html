@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
     <link rel="stylesheet" type="text/css" href="/css.css">
 </head>
+<!--TODO add delete button-->
 
 <body>
+    <h1>Cart</h1>
     <div>
         <form id="potionscart" action="/pages/cart.html" method="post">
             <table class="potionscart">
@@ -22,10 +24,10 @@
                 </thead>
                 <tbody></tbody>
             </table>
-            <p id="sub-total">
+            <p id="subtotal">
                 <strong>Sub Total</strong>: <span id="stotal"></span>
             </p>
-            <ul id="potionsgcartactions">
+            <ul id="potionscartactions" class="group-list horizontal">
                 <li>
                     <input type="submit" name="update" id="updatecart" class="btn" value="Update Cart" />
                 </li>
@@ -33,10 +35,10 @@
                     <input type="submit" name="delete" id="emptycart" class="btn" value="Empty Cart" />
                 </li>
                 <li>
-                    <a href="/pages/potions.html" class="btn">Continue Shopping</a>
+                    <a href="/pages/potions.html" class="btn btnCSS">Continue Shopping</a>
                 </li>
                 <li>
-                    <a href="/pages/checkout.html" class="btn">Go To Checkout</a>
+                    <a href="/pages/checkout.html" class="btn btnCSS">Checkout</a>
                 </li>
             </ul>
         </form>
